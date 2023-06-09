@@ -1,0 +1,23 @@
+import css from './FeedbackOptions.module.css';
+import { nanoid } from 'nanoid';
+import { useFeedback } from 'components/feedbackContext/feedbackContext';
+
+export const FeedbackOptions = () => {
+  const { options, incrementTargetFeedbackCounter } = useFeedback();
+
+  return (
+    <div className={css.feedbackButtonsDiv}>
+      {options.map(btn => (
+        <button
+          key={nanoid()}
+          className={css.feedbackButton}
+          type="button"
+          name={btn}
+          onClick={incrementTargetFeedbackCounter}
+        >
+          {btn}
+        </button>
+      ))}
+    </div>
+  );
+};
