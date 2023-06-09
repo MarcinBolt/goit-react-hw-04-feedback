@@ -1,7 +1,7 @@
-import { useFeedback } from 'components/feedbackContext/feedbackContext';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
+import { useFeedback } from 'components/feedbackContext/feedbackContext';
 
 export const App = () => {
   const {
