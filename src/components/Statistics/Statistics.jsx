@@ -1,6 +1,6 @@
+import { useFeedback } from 'components/feedbackContext/feedbackContext';
 import css from '../Statistics/Statistics.module.css';
 import { Notification } from 'components/Notification/Notification';
-import { useFeedback } from 'components/feedbackContext/feedbackContext';
 
 export const Statistics = () => {
   const {

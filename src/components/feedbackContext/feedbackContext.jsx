@@ -14,15 +14,9 @@ export const FeedbackProvider = ({ children }) => {
   const incrementTargetFeedbackCounter = e => {
     const buttonName = e.target.name;
 
-    if (buttonName === 'good') {
-      setGood(good + 1);
-    }
-    if (buttonName === 'neutral') {
-      setNeutral(neutral + 1);
-    }
-    if (buttonName === 'bad') {
-      setBad(bad + 1);
-    }
+    if (buttonName === 'good') setGood(good + 1);
+    if (buttonName === 'neutral') setNeutral(neutral + 1);
+    if (buttonName === 'bad') setBad(bad + 1);
   };
 
   const countTotalFeedback = () => good + neutral + bad;

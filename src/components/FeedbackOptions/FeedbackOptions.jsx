@@ -1,6 +1,6 @@
+import { useFeedback } from 'components/feedbackContext/feedbackContext';
 import css from './FeedbackOptions.module.css';
 import { nanoid } from 'nanoid';
-import { useFeedback } from 'components/feedbackContext/feedbackContext';
 
 export const FeedbackOptions = () => {
   const { options, incrementTargetFeedbackCounter } = useFeedback();
