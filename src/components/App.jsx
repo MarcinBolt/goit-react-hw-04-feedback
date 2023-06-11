@@ -1,31 +1,18 @@
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
-import { useFeedback } from 'components/feedbackContext/feedbackContext';
 
-export const App = () => {
-  const {
-    good,
-    neutral,
-    bad,
-    countTotalFeedback,
-    countPositiveFeedbackPercentage,
-  } = useFeedback();
-
+function App() {
   return (
     <>
       <Section title="Please leave feedback">
         <FeedbackOptions />
       </Section>
       <Section title="Statistics">
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={countTotalFeedback()}
-          positive={countPositiveFeedbackPercentage()}
-        />
+        <Statistics />
       </Section>
     </>
   );
-};
+}
+
+export default App;
